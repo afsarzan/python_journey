@@ -47,3 +47,33 @@ print(course.startswith("py")) # Check if the string starts with a specific pref
 print(course.endswith("y")) # Check if the string ends with a specific suffix
 print(course.find("journey")) # Find the index of a substring
 print(course.index("journey")) # Find the index of a substring (raises error if not found)
+
+#numbers in python
+x = 10  #assign number
+x = 1.1  #float number
+x = 1 + 2j # complex number
+
+# number functions
+print(abs(-10))  # Absolute value
+print(pow(2, 3))  # Power function (2 raised to the power of
+# 3)
+print(max(1, 2, 3, 4, 5))  # Maximum value
+print(min(1, 2, 3, 4, 5))  # Minimum value
+print(round(3.14159, 2))  # Round to 2 decimal places   
+print(sum([1, 2, 3, 4, 5]))  # Sum of a list of numbers
+print(divmod(10, 3))  # Returns a tuple (quotient, remainder)
+#use ceiling and floor functions
+import math 
+print(math.ceil(3.14))  # Ceiling function (rounds up)
+
+print(math.floor(3.14))  # Floor function (rounds down)
+# use math functions
+print(math.sqrt(16))  # Square root    
+print(math.factorial(5))  # Factorial of a number
+print(math.gcd(12, 15))  # Greatest common divisor
+print(math.lcm(12, 15))  # Least common multiple
+# use random module
+import random
+print(random.randint(1, 10))  # Generate a random integer between 1 and 10
+print(random.random())  # Generate a random float between 0 and 1
+print(random.choice(['apple', 'banana', 'cherry']))  # Select a random element from a list
