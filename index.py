@@ -49,9 +49,11 @@ print(course.find("journey")) # Find the index of a substring
 print(course.index("journey")) # Find the index of a substring (raises error if not found)
 
 #numbers in python
-x = 10  #assign number
+x = 10  #integer number
 x = 1.1  #float number
 x = 1 + 2j # complex number
+
+
 
 # number functions
 print(abs(-10))  # Absolute value
@@ -77,3 +79,38 @@ import random
 print(random.randint(1, 10))  # Generate a random integer between 1 and 10
 print(random.random())  # Generate a random float between 0 and 1
 print(random.choice(['apple', 'banana', 'cherry']))  # Select a random element from a list
+
+
+
+#learning control flow
+# if-else statements
+age = 20
+if age >= 18:
+    print("You are an adult.")
+elif age < 18:
+    print("You are a minor.")
+else:
+    print("Invalid input")
+
+#ternary operator
+is_adult = "You are an adult." if age >= 18 else "You are a minor."
+print(is_adult) 
+
+#3 logical operators
+is_adult = True 
+is_student = False
+has_job = True
+if is_adult and has_job:
+    print("You are an adult with a job.")
+elif is_adult or is_student:
+    print("You are either an adult or a student.")
+else:
+    print("You are neither an adult nor a student.")    
+
+#chain comparison operators
+x = 10
+y = 20
+if x < y < 30:
+    print("x is less than y and y is less than 30.")
+else:
+    print("At least one condition is false.")
