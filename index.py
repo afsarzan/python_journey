@@ -114,3 +114,23 @@ if x < y < 30:
     print("x is less than y and y is less than 30.")
 else:
     print("At least one condition is false.")
+
+# range step looping
+for i in range(0, 10, 2):  # Loop from 0 to 9 with a step of 2
+    print(i)
+
+for i in range(0,10):
+    if i % 2 == 0:  # Check if the number is even
+        print(f"{i} is even")
+    elif i % 2 != 0:
+        print(f"{i} is odd")
+
+print(type(range(5)))
+
+for x in [1, 2, 3, 4, 5]:
+    print(x)
+
+command = ""
+while command.lower() != "quit":
+    command = input("Enter a command (or 'quit' to exit): ")
+    print(f"You entered: {command}")
