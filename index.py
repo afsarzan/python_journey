@@ -130,7 +130,39 @@ print(type(range(5)))
 for x in [1, 2, 3, 4, 5]:
     print(x)
 
-command = ""
-while command.lower() != "quit":
-    command = input("Enter a command (or 'quit' to exit): ")
-    print(f"You entered: {command}")
+# command = ""
+# while command.lower() != "quit":
+#     command = input("Enter a command (or 'quit' to exit): ")
+#     print(f"You entered: {command}")
+
+#  unpacking list
+numbers = [1, 2, 3, 4, 5]
+a, b, c, *rest = numbers  # Unpacking with rest
+print(f"a: {a}, b: {b}, c: {c}, rest: {rest}")
+
+del numbers[0:2]  # Delete the first two elements
+print(f"After deletion: {numbers}")
+
+numbers.sort(reverse=True)  #sort the list in descending order
+print(f"Sorted list: {numbers}")
+
+sorted_numbers = sorted(numbers)  #sorted function returns a new sorted list
+print(f"Sorted list using sorted(): {sorted_numbers}")
+
+ages = [25, 30, 18, 22, 35];
+
+x =filter(lambda age: age>21,ages)
+#count length of the filtered list using len() function
+print(f"Number of ages greater than 21: {len(list(x))}")
+x = list(x)  # Convert the filter object to a list  
+print(f"Filtered ages: {x}")
+
+print([age for age in ages if age > 21])  # List comprehension to filter ages greater than 21
+
+list1 = [2, 4, 6, 8]
+list2 = [1, 3, 5, 7]
+#add two lists and sort()
+print(f"Sorted merged list: {sorted}")  # Merge and sort two lists
+#sort combined list
+print(sorted(list1 + list2))  # Sort the combined list
+print((list1 + list2))  # Concatenate two lists
