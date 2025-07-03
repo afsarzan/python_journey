@@ -1,3 +1,5 @@
+import math
+import random
 name = "Afsar is my name"
 # print(name)
 # this is comment
@@ -28,31 +30,32 @@ def get_cost(sqft_walls, sqft_ceiling, sqft_per_gallon, cost_per_gallon):
 
 print(get_cost(1000, 500, 350, 25))
 
-course  = "python journey"
+course = "python journey"
 # String formatting examples
 print(course.upper())
-print(course.lower())   
+print(course.lower())
 print(course.title())
 print(course.find("journey"))
-print(course.replace("journey", "adventure"))   
-print('python' in course)   
+print(course.replace("journey", "adventure"))
+print('python' in course)
 print('Python' not in course)  # Check if a substring is not in the string
 print(course.split(" "))  # Split the string into a list of words
 print(len(course))
 print(course.strip())  # Remove leading and trailing whitespace
 print(course.lstrip())  # Remove leading whitespace
 print(course.rstrip())  # Remove trailing whitespace
-print(course.count("p")) # Count occurrences of a character or substring
-print(course.startswith("py")) # Check if the string starts with a specific prefix
-print(course.endswith("y")) # Check if the string ends with a specific suffix
-print(course.find("journey")) # Find the index of a substring
-print(course.index("journey")) # Find the index of a substring (raises error if not found)
+print(course.count("p"))  # Count occurrences of a character or substring
+# Check if the string starts with a specific prefix
+print(course.startswith("py"))
+print(course.endswith("y"))  # Check if the string ends with a specific suffix
+print(course.find("journey"))  # Find the index of a substring
+# Find the index of a substring (raises error if not found)
+print(course.index("journey"))
 
-#numbers in python
-x = 10  #integer number
-x = 1.1  #float number
-x = 1 + 2j # complex number
-
+# numbers in python
+x = 10  # integer number
+x = 1.1  # float number
+x = 1 + 2j  # complex number
 
 
 # number functions
@@ -61,28 +64,26 @@ print(pow(2, 3))  # Power function (2 raised to the power of
 # 3)
 print(max(1, 2, 3, 4, 5))  # Maximum value
 print(min(1, 2, 3, 4, 5))  # Minimum value
-print(round(3.14159, 2))  # Round to 2 decimal places   
+print(round(3.14159, 2))  # Round to 2 decimal places
 print(sum([1, 2, 3, 4, 5]))  # Sum of a list of numbers
 print(divmod(10, 3))  # Returns a tuple (quotient, remainder)
-#use ceiling and floor functions
-import math 
+# use ceiling and floor functions
 print(math.ceil(3.14))  # Ceiling function (rounds up)
 
 print(math.floor(3.14))  # Floor function (rounds down)
 # use math functions
-print(math.sqrt(16))  # Square root    
+print(math.sqrt(16))  # Square root
 print(math.factorial(5))  # Factorial of a number
 print(math.gcd(12, 15))  # Greatest common divisor
 print(math.lcm(12, 15))  # Least common multiple
 # use random module
-import random
 print(random.randint(1, 10))  # Generate a random integer between 1 and 10
 print(random.random())  # Generate a random float between 0 and 1
-print(random.choice(['apple', 'banana', 'cherry']))  # Select a random element from a list
+# Select a random element from a list
+print(random.choice(['apple', 'banana', 'cherry']))
 
 
-
-#learning control flow
+# learning control flow
 # if-else statements
 age = 20
 if age >= 18:
@@ -92,12 +93,12 @@ elif age < 18:
 else:
     print("Invalid input")
 
-#ternary operator
+# ternary operator
 is_adult = "You are an adult." if age >= 18 else "You are a minor."
-print(is_adult) 
+print(is_adult)
 
-#3 logical operators
-is_adult = True 
+# 3 logical operators
+is_adult = True
 is_student = False
 has_job = True
 if is_adult and has_job:
@@ -105,9 +106,9 @@ if is_adult and has_job:
 elif is_adult or is_student:
     print("You are either an adult or a student.")
 else:
-    print("You are neither an adult nor a student.")    
+    print("You are neither an adult nor a student.")
 
-#chain comparison operators
+# chain comparison operators
 x = 10
 y = 20
 if x < y < 30:
@@ -119,7 +120,7 @@ else:
 for i in range(0, 10, 2):  # Loop from 0 to 9 with a step of 2
     print(i)
 
-for i in range(0,10):
+for i in range(0, 10):
     if i % 2 == 0:  # Check if the number is even
         print(f"{i} is even")
     elif i % 2 != 0:
@@ -143,47 +144,109 @@ print(f"a: {a}, b: {b}, c: {c}, rest: {rest}")
 del numbers[0:2]  # Delete the first two elements
 print(f"After deletion: {numbers}")
 
-numbers.sort(reverse=True)  #sort the list in descending order
+numbers.sort(reverse=True)  # sort the list in descending order
 print(f"Sorted list: {numbers}")
 
-sorted_numbers = sorted(numbers)  #sorted function returns a new sorted list
+sorted_numbers = sorted(numbers)  # sorted function returns a new sorted list
 print(f"Sorted list using sorted(): {sorted_numbers}")
 
-ages = [25, 30, 18, 22, 35];
+ages = [25, 30, 18, 22, 35]
 
-x =filter(lambda age: age>21,ages)
-#count length of the filtered list using len() function
+x = filter(lambda age: age > 21, ages)
+# count length of the filtered list using len() function
 print(f"Number of ages greater than 21: {len(list(x))}")
-x = list(x)  # Convert the filter object to a list  
+x = list(x)  # Convert the filter object to a list
 print(f"Filtered ages: {x}")
 
-print([age for age in ages if age > 21])  # List comprehension to filter ages greater than 21
+# List comprehension to filter ages greater than 21
+print([age for age in ages if age > 21])
 
 list1 = [2, 4, 6, 8]
 list2 = [1, 3, 5, 7]
-#add two lists and sort()
+# add two lists and sort()
 print(f"Sorted merged list: {sorted}")  # Merge and sort two lists
-#sort combined list
+# sort combined list
 print(sorted(list1 + list2))  # Sort the combined list
 print((list1 + list2))  # Concatenate two lists
 
 
-#dictionaries
+# dictionaries
 point = {"x": 1, "y": 2}
-point = dict (x = 1 , y = 2 )
+point = dict(x=1, y=2)
 point["x"] = 10
 point["z"] = 20
 if "a" in point:
-    print(point ["a"])
+    print(point["a"])
 print(point.get("a", 0))
-del point ["x"]
+del point["x"]
 print(point)
 for key in point:
- print(key, point[key])
+    print(key, point[key])
 
- #generator objects
- from sys import getsizeof
+    # generator objects
+    from sys import getsizeof
 values = (x * 2 for x in range(100000))
 print("gen:", getsizeof(values))
 values = [x * 2 for x in range(100000)]
 print("list:", getsizeof(values))
+
+# exceptions
+# try:
+#     age = int(input("Enter your age: "))
+#     print(f"You are {age} years old.")
+# except ValueError:
+#     print("Invalid input. Please enter a valid age.")
+# else:
+#     print("Age input was successful.")
+# finally:
+#     print("Execution completed.")
+
+
+# classes
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    def draw(self):
+        print(f"Point ({self.x}, {self.y})")
+        
+point = Point(1, 2)
+point.draw()
+
+class Person:
+    def __init__(self,first_name,last_name):
+        self.first_name = first_name
+        self.last_name = last_name
+    
+    def greet(self):
+        print(f"Hello, {self.first_name} {self.last_name}!")
+
+person = Person("afsar", "ahmed");
+person.greet()
+
+#create a class with first name and last name attributes with age and greet method
+class PersonWithAge:
+    def __init__(self, first_name, last_name, age):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+    
+    def greet(self):
+        print(f"Hello, {self.first_name} {self.last_name}! You are {self.age} years old.")
+
+person_with_age = PersonWithAge("Afsar", "Ahmed", 30)
+person_with_age.greet()
+
+
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    def __eq__(self, other):
+        return self.x == other.x and self.y == other.y
+    def __gt__(self, other):
+        return self.x > other.x and self.y > other.y
+    
+point = Point(1, 2)
+other = Point(1, 2)
+print(point == other)  # True
