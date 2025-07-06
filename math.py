@@ -36,6 +36,30 @@ def logarithm(a, base=np.e):
         raise ValueError("Logarithm undefined for non-positive numbers.")
     return np.log(a) / np.log(base)
 print("Math functions loaded successfully.")
+def load_math_functions():
+    """Function to load math functions."""
+    return {
+        "add": add,
+        "subtract": subtract,
+        "multiply": multiply,
+        "divide": divide,
+        "power": power,
+        "square_root": square_root,
+        "absolute_value": absolute_value,
+        "factorial": factorial,
+        "logarithm": logarithm
+    }
+#usuage loading math functions
+math_functions = load_math_functions()
+# math.py - A module for basic mathematical operations using numpy
+# This module provides basic mathematical operations using numpy.
+# It includes functions for addition, subtraction, multiplication, division,
+# exponentiation, square root, absolute value, factorial, and logarithm.
+# Importing numpy for mathematical operations
+print(math_functions.add(5, 3))  # Example usage of the add function
+
+
+
 # Example usage:
 if __name__ == "__main__":
     print("Addition:", add(5, 3))
